@@ -6,6 +6,101 @@
     <title>GenAI Notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Comprehensive notes on Generative AI, Deep Learning, and Neural Networks">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <style>
+        .markdown-section {
+            max-width: 1000px;
+            padding: 30px 15px 40px;
+        }
+
+        .sidebar {
+            border-right: 1px solid #eee;
+        }
+
+        .sidebar-nav a {
+            color: #364149;
+            font-weight: 400;
+        }
+
+        .sidebar-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .sidebar-nav>ul>li>p {
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .cover-main {
+            text-align: center;
+        }
+
+        .cover-main h1 {
+            color: #42b883;
+            font-size: 4rem;
+            font-weight: 300;
+            margin: 0.625rem 0 2.5rem;
+            position: relative;
+            text-align: center;
+        }
+
+        .markdown-section h1,
+        .markdown-section h2,
+        .markdown-section h3 {
+            color: #2c3e50;
+        }
+
+        .markdown-section blockquote {
+            border-left: 4px solid #42b883;
+            background-color: #f8f9fa;
+            margin: 2em 0;
+            padding: 1rem;
+        }
+
+        .markdown-section code {
+            background-color: #f8f8f8;
+            border-radius: 3px;
+            color: #e96900;
+            margin: 0 2px;
+            padding: 3px 5px;
+        }
+
+        .markdown-section pre {
+            background-color: #f8f8f8;
+            border-radius: 6px;
+            line-height: 1.5;
+            margin: 1.2em 0;
+            overflow: auto;
+            padding: 1rem;
+        }
+
+        .markdown-section img {
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+            max-width: 100%;
+        }
+
+        .markdown-section table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            display: block;
+            margin-bottom: 1rem;
+            overflow: auto;
+            width: 100%;
+        }
+
+        .markdown-section table th {
+            background-color: #f6f8fa;
+            font-weight: 600;
+        }
+
+        .markdown-section table th,
+        .markdown-section table td {
+            border: 1px solid #dfe2e5;
+            padding: 6px 13px;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,21 +110,44 @@
             name: 'GenAI Course Notes',
             repo: '',
             loadSidebar: true,
-            subMaxLevel: 2,
+            subMaxLevel: 3,
             homepage: 'README.md',
             coverpage: true,
-            search: 'auto',
+            search: {
+                maxAge: 86400000,
+                paths: 'auto',
+                placeholder: 'Search...',
+                noData: 'No Results!',
+                depth: 4
+            },
             copyCode: {
                 buttonText: 'Copy to clipboard',
                 errorText: 'Error',
                 successText: 'Copied'
+            },
+            pagination: {
+                previousText: '← Previous',
+                nextText: 'Next →',
+                crossChapter: true,
+                crossChapterText: true,
+            },
+            tabs: {
+                persist: true,
+                sync: true,
+                theme: 'classic',
+                tabComments: true,
+                tabHeadings: true
             }
         }
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
     <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+    <script src="//unpkg.com/docsify-copy-code@2"></script>
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
     <script src="//unpkg.com/prismjs/components/prism-python.min.js"></script>
-    <script src="//unpkg.com/docsify-copy-code"></script>
+    <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
 </body>
 
 </html>
