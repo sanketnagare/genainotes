@@ -1,12 +1,10 @@
-# GenAI Course Notes
+# GenAI Study Notes
 
 Welcome to my comprehensive notes on **Generative AI**, **Deep Learning**, and **Neural Networks**!
 
-## About This Course
+These are my personal study notes covering foundational concepts through advanced topics in Generative AI. The content is organized into several modules:
 
-This documentation contains detailed notes covering foundational concepts through advanced topics in Generative AI. The content is organized into several modules:
-
-### 📚 Course Modules
+### 📚 Study Modules
 
 - **Module 1: Overview of GenAI**
   - Introduction to AI, ML, and GenAI concepts
@@ -34,4 +32,4 @@ Use the sidebar to navigate through different topics. Each section contains deta
 
 ---
 
-*These notes are compiled as part of my GenAI learning journey. Feel free to explore and learn!* 
+*These are my personal study notes compiled during my GenAI learning journey. Feel free to explore and learn along!* 
