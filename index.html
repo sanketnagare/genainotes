@@ -100,6 +100,61 @@
             border: 1px solid #dfe2e5;
             padding: 6px 13px;
         }
+
+        /* Mobile optimizations */
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                transform: translateX(0) !important;
+                position: relative !important;
+                width: 100% !important;
+                border-right: none !important;
+                border-bottom: 1px solid #eee;
+                padding: 20px 0 !important;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                padding-top: 0 !important;
+                margin-left: 0 !important;
+            }
+
+            .sidebar-toggle {
+                display: none !important;
+            }
+
+            .sidebar-nav {
+                padding: 0 20px;
+            }
+
+            .sidebar ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            .sidebar-nav>ul>li {
+                margin: 10px 0;
+            }
+
+            .sidebar-nav>ul>li>p {
+                background-color: #f8f9fa;
+                padding: 8px 12px;
+                border-radius: 4px;
+                margin: 5px 0;
+            }
+
+            .markdown-section {
+                padding: 20px 15px;
+                max-width: 100%;
+            }
+
+            body.sticky .sidebar {
+                position: sticky !important;
+                top: 0 !important;
+                z-index: 10;
+                background: white;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+        }
     </style>
 </head>
 
@@ -137,7 +192,9 @@
                 theme: 'classic',
                 tabComments: true,
                 tabHeadings: true
-            }
+            },
+            auto2top: true,
+            themeColor: '#42b883'
         }
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
