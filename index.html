@@ -101,58 +101,104 @@
             padding: 6px 13px;
         }
 
-        /* Mobile optimizations */
+        /* Mobile optimizations - Force sidebar to be always visible at top */
         @media screen and (max-width: 768px) {
+
+            /* Hide hamburger menu completely */
+            .sidebar-toggle,
+            .sidebar-toggle-button,
+            button.sidebar-toggle {
+                display: none !important;
+                visibility: hidden !important;
+            }
+
+            /* Force sidebar to be visible and at top */
             .sidebar {
                 transform: translateX(0) !important;
-                position: relative !important;
+                position: static !important;
                 width: 100% !important;
+                height: auto !important;
                 border-right: none !important;
                 border-bottom: 1px solid #eee;
                 padding: 20px 0 !important;
                 margin-bottom: 20px;
+                left: 0 !important;
+                top: 0 !important;
+                z-index: 1;
+                background: white;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
             }
 
+            /* Adjust main content area */
             .content {
                 padding-top: 0 !important;
                 margin-left: 0 !important;
+                position: relative !important;
+                left: 0 !important;
+                max-width: 100% !important;
             }
 
-            .sidebar-toggle {
-                display: none !important;
-            }
-
+            /* Style sidebar navigation */
             .sidebar-nav {
-                padding: 0 20px;
+                padding: 0 20px !important;
+                width: 100% !important;
             }
 
             .sidebar ul {
-                margin: 0;
-                padding: 0;
+                margin: 0 !important;
+                padding: 0 !important;
             }
 
+            /* Style navigation items */
             .sidebar-nav>ul>li {
-                margin: 10px 0;
+                margin: 10px 0 !important;
             }
 
             .sidebar-nav>ul>li>p {
-                background-color: #f8f9fa;
-                padding: 8px 12px;
-                border-radius: 4px;
-                margin: 5px 0;
+                background-color: #f8f9fa !important;
+                padding: 8px 12px !important;
+                border-radius: 4px !important;
+                margin: 5px 0 !important;
+                font-weight: 600 !important;
             }
 
+            /* Improve content readability */
             .markdown-section {
-                padding: 20px 15px;
-                max-width: 100%;
+                padding: 20px 15px !important;
+                max-width: 100% !important;
             }
 
-            body.sticky .sidebar {
-                position: sticky !important;
-                top: 0 !important;
-                z-index: 10;
-                background: white;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Ensure body doesn't have mobile class interfering */
+            body.close .sidebar {
+                transform: translateX(0) !important;
+                position: static !important;
+            }
+
+            /* Force visibility even when collapsed */
+            body.close .content {
+                margin-left: 0 !important;
+            }
+        }
+
+        /* Additional mobile fixes for any remaining hamburger elements */
+        @media screen and (max-width: 768px) {
+
+            /* Target any possible hamburger menu variations */
+            .app-nav,
+            .github-corner,
+            .sidebar-toggle span,
+            [data-sidebar-toggle],
+            .btn-toggle {
+                display: none !important;
+            }
+
+            /* Force main app container layout */
+            .app {
+                display: block !important;
+            }
+
+            main {
+                height: auto !important;
             }
         }
     </style>
